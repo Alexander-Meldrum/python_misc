@@ -74,4 +74,4 @@ print('Inflation adjusted salary at: ' + str(current_year) + '-' + str(current_m
 ' should be: ' + str(round(adjusted_salary)) + ' kr')
 print(f'Monthly average inflation since {start_year}-{start_month} was: '+ str(round(Average_Inflation,2))+'%')
 
-print('Current salary / Inflation adjusted salary: '+ str(100+round(current_salary/adjusted_salary,2)) +'%')
+print('Current salary / Inflation adjusted salary: '+ str(100*round(current_salary/adjusted_salary,2)) +'%')
