@@ -9,14 +9,14 @@ from statistics import mean
 # "start" of either employment or latest salary raise etc. [int]
 # cannot be set to current month/year
 # month is defined in [1-12]
-start_month = 1
+start_month = 8
 start_year = 2019
-start_salary = 30000
-current_salary = 31600
+start_salary = 40000
+current_salary = 44600
 ### Current Date ###
-# Can only be set to latest inflation data point in inflation_by_month below.
-current_month = 12
-current_year = 2021
+# Can only be set to latest valid inflation data point in inflation_by_month below.
+current_month = 3
+current_year = 2023
 #current_month = int(datetime.today().strftime('%m'))
 #current_year = int(datetime.today().strftime('%Y'))
 #----------------------------------------------------------------------#
@@ -31,10 +31,9 @@ inflation_by_month = {
     '2019':	[2.0, 1.9, 1.8, 2.0, 2.1, 1.7, 1.5, 1.3, 1.3, 1.5, 1.7, 1.7],
     '2020':	[1.2, 1.0, 0.6, -0.4, 0.0, 0.7, 0.5, 0.7, 0.3, 0.3, 0.2, 0.5],
     '2021':	[1.7, 1.5, 1.9,	2.5, 2.1, 1.6, 1.7,	2.4, 2.8, 3.1, 3.6, 4.1],
-    '2022':	[0,0,0,0,0,0,0,0,0,0,0,0]     # TODO Update me later
+    '2022':	[3.9, 4.5, 6.1,	6.4, 7.2, 8.5, 8.0,	9.0, 9.7, 9.3, 9.5,	10.2],
+    '2023':	[9.3, 9.4, 8.0],   # TODO Update me later
 }
-
-
 
 ### Prepare the loop ###
 month_counter = start_month
