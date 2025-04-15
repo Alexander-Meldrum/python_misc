@@ -4,24 +4,9 @@
 from datetime import datetime
 from statistics import mean
 
-### Edit these values ###
+# Edit these values #
 #----------------------------------------------------------------------#
-# "start" of either employment or latest salary raise etc. [int]
-# cannot be set to current month/year
-# month is defined in [1-12]
-start_month = 8
-start_year = 2019
-start_salary = 40000
-current_salary = 52400
-### Current Date ###
-# Can only be set to latest valid inflation data point in inflation_by_month below.
-current_month = 2
-current_year = 2025
-#current_month = int(datetime.today().strftime('%m'))
-#current_year = int(datetime.today().strftime('%Y'))
-#----------------------------------------------------------------------#
-
-### Swedish Inflation data ###
+### Swedish Inflation data 
 # https://www.riksbank.se/sv/penningpolitik/inflationsmalet/inflationen-just-nu/
 # TODO: Add new data entries when available, or add older data if needed.
 inflation_by_month = {
@@ -34,19 +19,29 @@ inflation_by_month = {
     '2022':	[3.9, 4.5, 6.1,	6.4, 7.2, 8.5, 8.0,	9.0, 9.7, 9.3, 9.5,	10.2],
     '2023':	[9.3, 9.4, 8.0, 7.6, 6.7, 6.4, 6.4 ,4.7, 4.0, 4.2, 3.6, 2.3],   
     '2024':	[3.3, 2.5, 2.2, 2.3, 2.3, 1.3, 1.7, 1.2, 1.1, 1.5, 1.5, 1.5], 
-    '2025' : [2.2, 2.9] # TODO Update me later
+    '2025': [2.2, 2.9] # TODO Update me later
 }
+
+### "start" of either employment or latest salary raise etc. [int]
+# cannot be set to current month/year
+# month is defined in [1-12]
+start_month = 8
+start_year = 2019
+start_salary = 40000
+
+### Current Date
+# Can only be set to latest valid inflation data point in inflation_by_month above.
+current_month = 2
+current_year = 2025
+current_salary = 52400
+
+#----------------------------------------------------------------------#
 
 ### Prepare the loop ###
 month_counter = start_month
 year_counter = start_year
 adjusted_salary = start_salary
 inflation_list = []
-
-print(f'current_month: {current_month}')
-print(f'current_year: {current_year}')
-#print(f'month_counter: {month_counter}')
-#print(f'year_counter: {year_counter}')
 
 while year_counter <= current_year:
     # New salary after 1 month = salary + salary * (1 + inflation_by_month / 100) / 12
