@@ -15,8 +15,8 @@ start_salary = 40000
 current_salary = 52400
 ### Current Date ###
 # Can only be set to latest valid inflation data point in inflation_by_month below.
-current_month = 4
-current_year = 2024
+current_month = 2
+current_year = 2025
 #current_month = int(datetime.today().strftime('%m'))
 #current_year = int(datetime.today().strftime('%Y'))
 #----------------------------------------------------------------------#
@@ -33,7 +33,8 @@ inflation_by_month = {
     '2021':	[1.7, 1.5, 1.9,	2.5, 2.1, 1.6, 1.7,	2.4, 2.8, 3.1, 3.6, 4.1],
     '2022':	[3.9, 4.5, 6.1,	6.4, 7.2, 8.5, 8.0,	9.0, 9.7, 9.3, 9.5,	10.2],
     '2023':	[9.3, 9.4, 8.0, 7.6, 6.7, 6.4, 6.4 ,4.7, 4.0, 4.2, 3.6, 2.3],   
-    '2024':	[3.3, 2.5, 2.2, 2.3,], # TODO Update me later
+    '2024':	[3.3, 2.5, 2.2, 2.3, 2.3, 1.3, 1.7, 1.2, 1.1, 1.5, 1.5, 1.5], 
+    '2025' : [2.2, 2.9] # TODO Update me later
 }
 
 ### Prepare the loop ###
